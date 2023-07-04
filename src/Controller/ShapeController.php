@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\DTO\CircleDTO;
 use App\DTO\TriangleDTO;
+use App\Response\ShapeResponse;
 use App\Service\Geometry\GeometryFactory;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -31,19 +32,24 @@ class ShapeController extends AbstractController
         float $sideB,
         float $sideC,
     ): JsonResponse {
-        $triangle = new TriangleDTO($sideA, $sideB, $sideC);
+        $shape = new TriangleDTO($sideA, $sideB, $sideC);
 
-        dump($this->geometryFactory->createGeometry($triangle));
-        return $this->json($this->geometryFactory->createGeometry($triangle));
+        return $this->json(new ShapeResponse(
+            $shape,
+            $this->geometryFactory->createGeometry($shape))
+        );
     }
 
     #[Route('/circle/{radius}', methods: [Request::METHOD_GET])]
     public function circle(
         float $radius,
     ): JsonResponse {
-        $circle = new CircleDTO($radius);
+        $shape = new CircleDTO($radius);
 
-        return $this->json($this->geometryFactory->createGeometry($circle));
+        return $this->json(new ShapeResponse(
+            $shape,
+            $this->geometryFactory->createGeometry($shape))
+        );
     }
 
 }
