@@ -1,9 +1,9 @@
 <?php
 
-namespace Exception;
+namespace App\Exception;
 
-use Exception;
+use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
-class MissingShapeHandlerException extends Exception
+class MissingShapeHandlerException extends UnprocessableEntityHttpException
 {
 }

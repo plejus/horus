@@ -1,9 +1,9 @@
 <?php
 
-namespace Exception;
+namespace App\Exception;
 
-use Psr\Log\InvalidArgumentException;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
-class InvalidShapeDimensionException extends InvalidArgumentException
+class InvalidShapeDimensionException extends BadRequestHttpException
 {
 }

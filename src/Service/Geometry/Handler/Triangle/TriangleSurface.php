@@ -1,12 +1,13 @@
 <?php
 
-namespace Service\Geometry\Handler\Triangle;
+namespace App\Service\Geometry\Handler\Triangle;
 
-use DTO\ShapeGeometryDTO;
-use DTO\ShapeInterface;
-use DTO\TriangleDTO;
-use Exception\InvalidShapeSideException;
-use Exception\ShapeMisconfigurationException;
+use App\DTO\ShapeGeometryDTO;
+use App\DTO\ShapeInterface;
+use App\DTO\TriangleDTO;
+use App\Exception\InvalidShapeSideException;
+use App\Exception\NotATriangleException;
+use App\Exception\ShapeMisconfigurationException;
 
 class TriangleSurface implements TriangleCalculatorInterface
 {
@@ -36,12 +37,15 @@ class TriangleSurface implements TriangleCalculatorInterface
         }
 
         $semiPerimeter = ($sideA + $sideB + $sideC) / 2;
-
-        return sqrt(
-            $semiPerimeter *
+        $checkedVal = $semiPerimeter *
             ($semiPerimeter - $sideA) *
             ($semiPerimeter - $sideB) *
-            ($semiPerimeter - $sideC)
-        );
+            ($semiPerimeter - $sideC);
+
+        if ($checkedVal <= 0) {
+            throw new NotATriangleException();
+        }
+
+        return sqrt($checkedVal);
     }
 }

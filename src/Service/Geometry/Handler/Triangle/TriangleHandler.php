@@ -1,11 +1,11 @@
 <?php
 
-namespace Service\Geometry\Handler\Triangle;
+namespace App\Service\Geometry\Handler\Triangle;
 
-use DTO\ShapeInterface;
-use DTO\TriangleDTO;
-use Service\Geometry\Handler\Circle\CircleCalculatorInterface;
-use Service\Geometry\Handler\ShapeHandlerInterface;
+use App\DTO\ShapeInterface;
+use App\DTO\TriangleDTO;
+use App\Service\Geometry\Handler\Circle\CircleCalculatorInterface;
+use App\Service\Geometry\Handler\ShapeHandlerInterface;
 use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 
 class TriangleHandler implements ShapeHandlerInterface
@@ -27,6 +27,6 @@ class TriangleHandler implements ShapeHandlerInterface
 
     public function getCalculators(): array
     {
-        return $this->handlers;
+        return iterator_to_array($this->handlers);
     }
 }

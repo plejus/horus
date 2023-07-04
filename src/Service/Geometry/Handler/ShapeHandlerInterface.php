@@ -1,8 +1,8 @@
 <?php
 
-namespace Service\Geometry\Handler;
+namespace App\Service\Geometry\Handler;
 
-use DTO\ShapeInterface;
+use App\DTO\ShapeInterface;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 #[AutoconfigureTag('app.service.geometry.handler')]

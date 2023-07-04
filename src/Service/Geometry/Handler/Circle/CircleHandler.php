@@ -1,10 +1,10 @@
 <?php
 
-namespace Service\Geometry\Handler\Circle;
+namespace App\Service\Geometry\Handler\Circle;
 
-use DTO\CircleDTO;
-use DTO\ShapeInterface;
-use Service\Geometry\Handler\ShapeHandlerInterface;
+use App\DTO\CircleDTO;
+use App\DTO\ShapeInterface;
+use App\Service\Geometry\Handler\ShapeHandlerInterface;
 use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 
 class CircleHandler implements ShapeHandlerInterface
@@ -26,6 +26,6 @@ class CircleHandler implements ShapeHandlerInterface
 
     public function getCalculators(): array
     {
-        return $this->handlers;
+        return iterator_to_array($this->handlers);
     }
 }

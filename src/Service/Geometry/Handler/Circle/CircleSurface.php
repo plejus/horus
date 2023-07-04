@@ -1,12 +1,12 @@
 <?php
 
-namespace Service\Geometry\Handler\Circle;
+namespace App\Service\Geometry\Handler\Circle;
 
-use DTO\CircleDTO;
-use DTO\ShapeGeometryDTO;
-use DTO\ShapeInterface;
-use Exception\InvalidShapeRadiusException;
-use Exception\ShapeMisconfigurationException;
+use App\DTO\CircleDTO;
+use App\DTO\ShapeGeometryDTO;
+use App\DTO\ShapeInterface;
+use App\Exception\InvalidShapeRadiusException;
+use App\Exception\ShapeMisconfigurationException;
 
 class CircleSurface implements CircleCalculatorInterface
 {

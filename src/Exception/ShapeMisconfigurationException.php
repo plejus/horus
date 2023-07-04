@@ -1,9 +1,9 @@
 <?php
 
-namespace Exception;
+namespace App\Exception;
 
-use Exception;
+use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
-class ShapeMisconfigurationException extends Exception
+class ShapeMisconfigurationException extends UnprocessableEntityHttpException
 {
 }

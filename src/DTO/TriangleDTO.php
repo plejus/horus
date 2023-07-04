@@ -1,8 +1,8 @@
 <?php
 
-namespace DTO;
+namespace App\DTO;
 
-use Enum\ShapeEnum;
+use App\Enum\ShapeEnum;
 
 readonly class TriangleDTO implements ShapeInterface
 {

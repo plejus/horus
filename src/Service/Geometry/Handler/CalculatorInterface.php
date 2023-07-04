@@ -1,9 +1,9 @@
 <?php
 
-namespace Service\Geometry\Handler;
+namespace App\Service\Geometry\Handler;
 
-use DTO\ShapeGeometryDTO;
-use DTO\ShapeInterface;
+use App\DTO\ShapeGeometryDTO;
+use App\DTO\ShapeInterface;
 
 interface CalculatorInterface
 {

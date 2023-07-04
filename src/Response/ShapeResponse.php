@@ -1,9 +1,9 @@
 <?php
 
-namespace Response;
+namespace App\Response;
 
-use DTO\ShapeGeometryDTO;
-use DTO\ShapeInterface;
+use App\DTO\ShapeGeometryDTO;
+use App\DTO\ShapeInterface;
 
 readonly class ShapeResponse
 {

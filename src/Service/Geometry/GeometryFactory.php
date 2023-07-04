@@ -1,11 +1,11 @@
 <?php
 
-namespace Service\Geometry;
+namespace App\Service\Geometry;
 
-use DTO\ShapeGeometryDTO;
-use DTO\ShapeInterface;
-use Exception\MissingShapeHandlerException;
-use Service\Geometry\Handler\ShapeHandlerInterface;
+use App\DTO\ShapeGeometryDTO;
+use App\DTO\ShapeInterface;
+use App\Exception\MissingShapeHandlerException;
+use App\Service\Geometry\Handler\ShapeHandlerInterface;
 use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 
 readonly class GeometryFactory

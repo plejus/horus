@@ -1,12 +1,12 @@
 <?php
 
-namespace Service\Geometry\Handler\Triangle;
+namespace App\Service\Geometry\Handler\Triangle;
 
-use DTO\ShapeGeometryDTO;
-use DTO\ShapeInterface;
-use DTO\TriangleDTO;
-use Exception\InvalidShapeSideException;
-use Exception\ShapeMisconfigurationException;
+use App\DTO\ShapeGeometryDTO;
+use App\DTO\ShapeInterface;
+use App\DTO\TriangleDTO;
+use App\Exception\InvalidShapeSideException;
+use App\Exception\ShapeMisconfigurationException;
 
 class TriangleCircumference implements TriangleCalculatorInterface
 {
