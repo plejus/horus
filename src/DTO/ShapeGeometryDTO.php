@@ -18,13 +18,17 @@ class ShapeGeometryDTO
         return $this->circumference;
     }
 
-    public function setSurface(float $surface): void
+    public function setSurface(float $surface): self
     {
         $this->surface = $surface;
+
+        return $this;
     }
 
-    public function setCircumference(float $circumference): void
+    public function setCircumference(float $circumference): self
     {
         $this->circumference = $circumference;
+
+        return $this;
     }
 }

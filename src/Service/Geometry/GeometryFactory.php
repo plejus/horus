@@ -8,7 +8,7 @@ use App\Exception\MissingShapeHandlerException;
 use App\Service\Geometry\Handler\ShapeHandlerInterface;
 use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 
-readonly class GeometryFactory
+class GeometryFactory
 {
     /** @var ShapeHandlerInterface[] */
     private iterable $handlers;
